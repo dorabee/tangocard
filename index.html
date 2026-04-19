@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>単語アプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- メニュー -->
+<div id="menu" class="screen">
+  <h1>単語アプリ</h1>
+
+  <input type="text" id="newCategory" placeholder="カテゴリ名">
+  <button id="addCategoryBtn">カテゴリ追加</button>
+
+  <div id="categoryList"></div>
+
+  <button id="editBtn">単語編集</button>
+</div>
+
+<!-- 編集 -->
+<div id="addArea" class="screen" style="display:none;">
+  <h2>単語編集</h2>
+
+  <h3>カテゴリ選択</h3>
+  <div id="editCategoryList"></div>
+
+  <input type="text" id="newQuestion" placeholder="英語">
+  <input type="text" id="newAnswer" placeholder="日本語">
+  <button id="addBtn">単語追加</button>
+
+  <div id="wordList"></div>
+
+  <button id="backMenuFromEdit">戻る</button>
+</div>
+
+<!-- クイズ -->
+<div id="quiz" class="screen" style="display:none;">
+  <h2 id="score">スコア: 0</h2>
+
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  <p id="progress-text"></p>
+
+  <p id="word"></p>
+  <div id="choices"></div>
+</div>
+
+<!-- 結果 -->
+<div id="result" class="screen" style="display:none;">
+  <h2 id="resultText"></h2>
+  <button id="restartBtn">もう一度</button>
+  <button id="backMenuBtn">メニューへ</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
