@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duolingo風クイズアプリ</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ナイトモード -->
+  <button id="darkModeBtn">ナイトモード OFF</button>
+
+  <!-- メニュー -->
+  <div class="screen" id="menu">
+
+    <h1>クイズアプリ</h1>
+
+    <div id="categoryList"></div>
+
+    <button id="editBtn">編集モード</button>
+
+  </div>
+
+  <!-- 編集画面 -->
+  <div class="screen" id="addArea" style="display:none;">
+
+    <h2>編集モード</h2>
+
+    <div id="editCategoryList"></div>
+
+    <input
+      type="text"
+      id="newCategory"
+      placeholder="新しいカテゴリ名"
+    >
+
+    <button id="addCategoryBtn">
+      カテゴリ追加
+    </button>
+
+    <h3>単語追加</h3>
+
+    <div id="wordList"></div>
+
+    <input
+      type="text"
+      id="newQuestion"
+      placeholder="問題"
+    >
+
+    <input
+      type="text"
+      id="newAnswer"
+      placeholder="答え"
+    >
+
+    <button id="addBtn">
+      単語追加
+    </button>
+
+    <br>
+
+    <button id="backMenuFromEdit">
+      メニューへ戻る
+    </button>
+
+  </div>
+
+  <!-- クイズ -->
+  <div class="screen" id="quiz" style="display:none;">
+
+    <h2 id="word"></h2>
+
+    <!-- 進捗 -->
+    <div id="progress-container">
+
+      <div id="progress-bar"></div>
+
+    </div>
+
+    <div id="progress-text"></div>
+
+    <div id="choices"></div>
+
+  </div>
+
+  <!-- 結果 -->
+  <div class="screen" id="result" style="display:none;">
+
+    <div id="resultText"></div>
+
+    <button id="restartBtn">
+      もう一回
+    </button>
+
+    <button id="backMenuBtn">
+      メニューへ戻る
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
